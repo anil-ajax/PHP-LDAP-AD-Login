@@ -24,10 +24,6 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
 
     if ($bind) {
-        $filter="(sAMAccountName=$username)";
-        $result = ldap_search($ldap,"dc=MYDOMAIN,dc=COM",$filter);
-        ldap_sort($ldap,$result,"sn");
-        $info = ldap_get_entries($ldap, $result);
-        var_dump($info);
+        // authentication successful
     }
 }
